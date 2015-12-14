@@ -4,9 +4,6 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     sass: {
       dist: {
-        options: {
-          style: 'expanded'
-        },
         files: {
           'build/styles/app.css': 'src/styles/app.scss'
         }
@@ -17,9 +14,10 @@ module.exports = function(grunt) {
         files: [{
           expand: true,
           cwd: 'build/styles',
-          src: ['*.css'],
+          src: ['*.css', "!*.scss"],
           dest: 'build/styles',
-          ext: '*.min.css'
+          ext: '.min.css',
+          dot: 'last'
         }]
       }
     },
@@ -28,7 +26,7 @@ module.exports = function(grunt) {
     },
     jasmine: {
       pivotal: {
-        src: 'src/**/*.js',
+        src: 'src/scripts/*.js',
         options: {
           specs: 'spec/*.spec.js',
           helpers: 'spec/*.helper.js'
@@ -42,6 +40,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
 
+  grunt.registerTask('test', ['jshint', 'jasmine']);
   grunt.registerTask('default', ["sass", "cssmin", "jshint", "jasmine"]);
 
 };

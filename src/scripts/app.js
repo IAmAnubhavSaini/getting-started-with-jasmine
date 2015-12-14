@@ -1,8 +1,7 @@
-var app = (function(global) {
+var myAppCreator = function(global) {
   global.app = global.app || {};
-  function sum(a, b) {
+  global.app.sum = function (a, b) {
     return a+b;
-  }
-  global.app = { sum: sum };
+  };
   return global.app;
-});
+};

@@ -1,6 +1,7 @@
-describe("A suite", function() {
-  it("contains spec with an expectation", function() {
-    expect(true).toBe(true);
+describe("app tests", function(){
+  var global = {};
+  var app = myAppCreator(global);
+  it("creates app and returns sum", function(){
+    expect(app.sum(1, 2)).toBe(3);
   });
 });
-
