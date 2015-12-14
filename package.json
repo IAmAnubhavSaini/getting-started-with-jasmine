@@ -1,0 +1,25 @@
+{
+  "name": "getting-started-with-jasmine",
+  "version": "0.0.0",
+  "description": "Learn: how to test javascrpt functionality via jasmine.",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IAmAnubhavSaini/getting-started-with-jasmine.git"
+  },
+  "keywords": [
+    "jasmine",
+    "learn",
+    "testing",
+    "tdd"
+  ],
+  "author": "Anubhav Saini <IAmAnubhavSaini@GMail.com> (http://iamanubhavsaini.github.io/showcase/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IAmAnubhavSaini/getting-started-with-jasmine/issues"
+  },
+  "homepage": "https://github.com/IAmAnubhavSaini/getting-started-with-jasmine#readme"
+}
