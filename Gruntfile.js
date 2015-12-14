@@ -8,7 +8,7 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         files: {
-          'build/css/app.css': 'src/css/app.scss'
+          'build/styles/app.css': 'src/styles/app.scss'
         }
       }
     },
@@ -16,9 +16,9 @@ module.exports = function(grunt) {
       target: {
         files: [{
           expand: true,
-          cwd: 'build/css',
+          cwd: 'build/styles',
           src: ['*.css'],
-          dest: 'build/css',
+          dest: 'build/styles',
           ext: '*.min.css'
         }]
       }

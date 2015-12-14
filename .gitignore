@@ -6,3 +6,5 @@ res/
 getting-started-with-jasmine.sublime-workspace
 node[-_]modules/
 .sass[-_]cache/
+_SpecRunner.html
+.grunt/
