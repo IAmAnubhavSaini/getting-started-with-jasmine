@@ -24,7 +24,7 @@ module.exports = function(grunt) {
       }
     },
     jshint: {
-
+      all: ["Gruntfile.js", "src/scripts/*.js", "build/scripts/*.js"]
     },
     jasmine: {
 
