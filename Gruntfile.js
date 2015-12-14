@@ -8,8 +8,19 @@ module.exports = function(grunt) {
           style: 'expanded'
         },
         files: {
-          'src/app.css': 'src/app.scss'
+          'build/css/app.css': 'src/css/app.scss'
         }
+      }
+    },
+    cssmin: {
+      target: {
+        files: [{
+          expand: true,
+          cwd: 'build/css',
+          src: ['*.css'],
+          dest: 'build/css',
+          ext: '*.min.css'
+        }]
       }
     },
     jshint: {
@@ -21,9 +32,10 @@ module.exports = function(grunt) {
   });
 
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
 
-  grunt.registerTask('default', ["sass"]);
+  grunt.registerTask('default', ["sass", "cssmin"]);
 
 };
