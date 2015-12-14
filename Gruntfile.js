@@ -27,7 +27,13 @@ module.exports = function(grunt) {
       all: ["Gruntfile.js", "src/scripts/*.js", "build/scripts/*.js"]
     },
     jasmine: {
-
+      pivotal: {
+        src: 'src/**/*.js',
+        options: {
+          specs: 'spec/*.spec.js',
+          helpers: 'spec/*.helper.js'
+        }
+      }
     }
   });
 
@@ -36,6 +42,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-jasmine');
 
-  grunt.registerTask('default', ["sass", "cssmin"]);
+  grunt.registerTask('default', ["sass", "cssmin", "jshint", "jasmine"]);
 
 };
