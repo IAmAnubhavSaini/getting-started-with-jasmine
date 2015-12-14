@@ -4,3 +4,5 @@ dist/
 build/
 res/
 getting-started-with-jasmine.sublime-workspace
+node[-_]modules/
+.sass[-_]cache/
